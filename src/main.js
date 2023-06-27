@@ -20,6 +20,15 @@ import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
 
+import * as eCharts from 'echarts'
+import VueECharts from 'vue-echarts'
+
+// Vue.config.productionTip = false
+Vue.prototype.$echarts = eCharts
+
+// 注册组件后即可使用
+Vue.component('v-chart', VueECharts)
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

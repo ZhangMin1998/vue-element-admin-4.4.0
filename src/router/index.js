@@ -58,6 +58,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/databoard',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/databoard/index'),
+        name: 'Databoard',
+        meta: { title: 'Databoard', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [

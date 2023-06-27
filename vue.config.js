@@ -1,3 +1,4 @@
+// $env:NODE_OPTIONS="--openssl-legacy-provider"
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
