@@ -29,7 +29,9 @@
       </template>
       <template>
         <div class="sales-view-chart-wrapper">
-          <v-chart :option="option"></v-chart>
+          <div class="echart_wrapper">
+            <v-chart :option="option"></v-chart>
+          </div>
           <div class="sales-view-list">
             <div class="sales-view-title">排行榜</div>
             <div class="list-item-wrapper">
@@ -141,7 +143,6 @@ export default {
   },
   computed: {
     rankData () {
-      console.log(999999)
       return this.activeIndex === '1' ? this.orderRank : this.userRank
     }
   },
@@ -246,10 +247,13 @@ export default {
   .sales-view-chart-wrapper{
     display: flex;
     height: 270px;
-    .echarts{
-      flex: 0 0 70%;
-      width: 70%;
-      height: 100%;
+    .echart_wrapper{
+      width: 1000px;
+      .echarts{
+        flex: 0 0 70%;
+        // width: 60%;
+        height: 100%;
+      }
     }
     .sales-view-list{
       flex: 1;
@@ -264,9 +268,13 @@ export default {
       }
       .list-item-wrapper{
         margin-top: 15px;
+        display: flex;
+        flex-direction: column;
         .list-item{
           display: flex;
           align-items: center;
+          justify-content: space-around;
+          flex: 1;
           font-size: 12px;
           height: 20px;
           padding: 6px 20px 6px 0;
@@ -277,6 +285,7 @@ export default {
             width: 20px;
             height: 20px;
             color: #333;
+            line-height: 20px;
             &.top-no{
               color: #fff;
               font-weight: 500;

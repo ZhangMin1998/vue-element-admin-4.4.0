@@ -53,7 +53,7 @@ export default {
   },
   mounted () {
     // console.log(this.userGrowthMonth, (Number(this.userGrowthMonth) / 100).toFixed(4))
-    this.option.series[0].data[0] = [(Number(this.userGrowthMonth) / 100).toFixed(4)]
+    this.option.series[0].data[0] = 0.66 // [(Number(this.userGrowthMonth) / 100).toFixed(4)]
     this.option.series[0].color = [this.getColor(this.option.series[0].data[0])]
   },
   methods: {

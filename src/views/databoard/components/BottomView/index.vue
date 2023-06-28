@@ -348,7 +348,7 @@ export default {
             letter-spacing: 2px;
           }
           .echarts{
-            height: 50px;
+            height: 50px !important;
           }
         }
       }
